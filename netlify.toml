@@ -1,0 +1,54 @@
+[[redirects]]
+    from = "/"
+    to = "/html/accueil.html"
+    status = 200
+
+[[redirects]]
+    from = "/accueil.html"
+    to = "/html/accueil.html"
+    status = 200
+
+[[redirects]]
+    from = "/a-propos.html"
+    to = "/html/a-propos.html"
+    status = 200
+
+[[redirects]]
+    from = "/applications.html"
+    to = "/html/applications.html"
+    status = 200
+
+[[redirects]]
+    from = "/construction.html"
+    to = "/html/construction.html"
+    status = 200
+
+[[redirects]]
+    from = "/contact.html"
+    to = "/html/contact.html"
+    status = 200
+
+[[redirects]]
+    from = "/cours.html"
+    to = "/html/cours.html"
+    status = 200
+
+[[redirects]]
+    from = "/cv.html"
+    to = "/html/cv.html"
+    status = 200
+
+[[redirects]]
+    from = "/jeux.html"
+    to = "/html/jeux.html"
+    status = 200
+
+[[redirects]]
+    from = "/sites-web.html"
+    to = "/html/sites-web.html"
+    status = 200
+
+[[redirects]]
+    from = "/*"
+    to = "/html/404.html"
+    status = 404
