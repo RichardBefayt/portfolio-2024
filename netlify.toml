@@ -1,16 +1,16 @@
 [[redirects]]
     from = "/"
-    to = "/html/accueil.html"
+    to = "/html/home.html"
     status = 200
 
 [[redirects]]
-    from = "/accueil.html"
-    to = "/html/accueil.html"
+    from = "/home.html"
+    to = "/html/home.html"
     status = 200
 
 [[redirects]]
-    from = "/a-propos.html"
-    to = "/html/a-propos.html"
+    from = "/about.html"
+    to = "/html/about.html"
     status = 200
 
 [[redirects]]
@@ -19,8 +19,8 @@
     status = 200
 
 [[redirects]]
-    from = "/construction.html"
-    to = "/html/construction.html"
+    from = "/in-progress.html"
+    to = "/html/in-progress.html"
     status = 200
 
 [[redirects]]
@@ -29,8 +29,8 @@
     status = 200
 
 [[redirects]]
-    from = "/cours.html"
-    to = "/html/cours.html"
+    from = "/skills.html"
+    to = "/html/skills.html"
     status = 200
 
 [[redirects]]
@@ -39,16 +39,16 @@
     status = 200
 
 [[redirects]]
-    from = "/jeux.html"
-    to = "/html/jeux.html"
+    from = "/games.html"
+    to = "/html/games.html"
     status = 200
 
 [[redirects]]
-    from = "/sites-web.html"
-    to = "/html/sites-web.html"
+    from = "/websites.html"
+    to = "/html/websites.html"
     status = 200
 
 [[redirects]]
     from = "/*"
-    to = "/html/404.html"
+    to = "/html/no-found.html"
     status = 404

@@ -1,31 +1,4 @@
 .home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 0;
-    min-width: fit-content;
-    max-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-}
-
-.home-background {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    filter: brightness(20%);
-    background-image: url(../assets/images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -5;
-}
-
-.home-bento {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -63,7 +36,7 @@
 .home-title {    
     grid-area: 1 / 1 / 2 / 2; /* div 1 */
     font-size: 1.8rem;
-    background-image: url(../assets/images/pages/accueil/portfolio-bg.jpg);
+    background-image: url(../assets/pictures/pages/home/portfolio-bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -141,17 +114,17 @@
     transform: scale(1.5);
 }
 
-.home-about-infos .details .text {
+.home-about-infos .details .mail {
     transition: var(--transition);
 }
-.home-about-infos .details .text:hover {
+.home-about-infos .details .mail:hover {
     color: var(--secondColor);
 }
 
 /***** CV *****/
 .home-cv {
     grid-area: 5 / 1 / 7 / 2; /* div 3 */
-    background-image: url(../assets/images/pages/accueil/cv-bg.png);
+    background-image: url(../assets/pictures/pages/home/cv-bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -160,7 +133,7 @@
 /***** SITES WEB *****/
 .home-websites {
     grid-area: 1 / 2 / 4 / 4; /* div 4 */
-    background-image: url(../assets/images/pages/accueil/websites-bg.png);
+    background-image: url(../assets/pictures/pages/home/websites-bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -169,7 +142,7 @@
 /***** APPLICATIONS *****/
 .home-applications {
     grid-area: 1 / 4 / 4 / 5; /* div 5 */
-    background-image: url(../assets/images/pages/accueil/applications-bg.png);
+    background-image: url(../assets/pictures/pages/home/applications-bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -178,7 +151,7 @@
 /***** JEUX *****/
 .home-games {
     grid-area: 4 / 2 / 7 / 3; /* div 6 */
-    background-image: url(../assets/images/pages/accueil/games-bg.jpg);
+    background-image: url(../assets/pictures/pages/home/games-bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -187,7 +160,7 @@
 /***** CONTACT *****/
 .home-contact {
     grid-area: 4 / 3 / 7 / 5; /* div 7 */
-    background-image: url(../assets/images/pages/accueil/contact-img.jpg);
+    background-image: url(../assets/pictures/pages/home/contact-img.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
