@@ -70,6 +70,7 @@ ul {
 /* Pour tous les boutons de classe .btn */
 .btn {
 	cursor: pointer;
+	min-width: 55px;
 	padding: 12px 20px;
 	font-size: 0.8rem;
 	font-weight: 500;
