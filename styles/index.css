@@ -80,17 +80,15 @@ ul {
 	border: 1px solid var(--firstColor);
 	border-radius: 10px;
 }
+.btn:hover {
+	color: var(--firstColor);
+	background: rgba(255, 255, 255, 0.2);
+	transition: 0.3s;
+}
 
 /* Pour les boutons de classe .btn-light */
 .btn-light {
+	color: var(--firstColor);
 	background: transparent;
-	color: var(--firstColor);
 	border-radius: 10px;
-}
-
-/* Au survol des boutons */
-.btn:hover {
-	background: rgba(255, 255, 255, 0.2);
-	color: var(--firstColor);
-	transition: 0.3s;
 }

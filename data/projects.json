@@ -1,0 +1,95 @@
+[
+    {
+        "id": 1,
+        "title": "Sites Web",
+        "category": "websites",
+        "details": [
+            {
+                "id": 1,
+                "subtitle": "Bs Pizza (client IRL)",
+                "slug": "https://bs-pizza.netlify.app/",
+                "thumbnail": "../assets/pictures/pages/websites/bs-pizza.jpg",
+                "description": "Site vitrine",
+                "technos": "HTML, CSS, JavaScript",
+                "source": "https://github.com/RichardBefayt/Bs-Pizza"
+            },
+            {
+                "id": 2,
+                "subtitle": "L'Art Culinaire",
+                "slug": "https://lartculinaire.netlify.app/",
+                "thumbnail": "../assets/pictures/pages/websites/restaurant.jpg",
+                "description": "Animations, formulaire et dates en JS.",
+                "technos": "HTML, CSS, JavaScript",
+                "source": "https://github.com/RichardBefayt/l-art-culinaire"
+            },
+            {
+                "id": 3,
+                "subtitle": "VIRTUALX",
+                "slug": "https://virtualx.netlify.app/",
+                "thumbnail": "../assets/pictures/pages/websites/VR.png",
+                "description": "Panier, Favoris, Login...",
+                "technos": "HTML, CSS, JavaScript, Stripe",
+                "source": "https://github.com/RichardBefayt/VirtualX"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Applications",
+        "category": "applications",
+        "details": [
+            {
+                "id": 1,
+                "subtitle": "API Cuisine",
+                "slug": "https://api-cuisine-1.netlify.app",
+                "thumbnail": "../assets/pictures/pages/applications/app-cuisine.jpg",
+                "description": "Utilisation d'une API",
+                "technos": "HTML, CSS, JavaScript",
+                "source": "https://github.com/RichardBefayt/api-cuisine-1"
+            },
+            {
+                "id": 2,
+                "subtitle": "To Do List",
+                "slug": "https://first-todo-list-react.netlify.app/",
+                "thumbnail": "../assets/pictures/pages/applications/todo-list-react.jpg",
+                "description": "CRUD",
+                "technos": "React",
+                "source": "https://github.com/RichardBefayt/todo-list-react"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Jeux",
+        "category": "games",
+        "details": [
+            {
+                "id": 1,
+                "subtitle": "Course de voiture (maquette en cours)",
+                "slug": "",
+                "thumbnail": "../assets/pictures/pages/games/voitures.jpg",
+                "description": "",
+                "technos": "",
+                "source":""
+            },
+            {
+                "id": 2,
+                "subtitle": "Course de chevaux (maquette en cours)",
+                "slug": "",
+                "thumbnail": "../assets/pictures/pages/games/chevaux.jpg",
+                "description": "",
+                "technos": "",
+                "source":""
+            },
+            {
+                "id": 3,
+                "subtitle": "Labyrinthe (maquette en cours)",
+                "slug": "",
+                "thumbnail": "../assets/pictures/pages/games/labyrinthe.jpg",
+                "description": "",
+                "technos": "",
+                "source":""
+            }
+        ]
+    }
+]
