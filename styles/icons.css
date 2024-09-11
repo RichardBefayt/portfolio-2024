@@ -1,0 +1,41 @@
+/* Technos */
+.fa-timeline,
+.fa-html5 {
+    color: rgb(240, 102, 39);
+}
+
+.fa-graduation-cap,
+.fa-css3-alt {
+    color: rgba(0, 76, 232, 1);
+}
+
+.fa-computer,
+.fa-sass,
+.fa-gamepad {
+    color: #ca659a;
+}
+
+.fa-list-check,
+.fa-js {
+    color: rgb(255, 222, 37);
+}
+
+.fa-motorcycle,
+.fa-node {
+    color: #549e43;
+}
+
+.fa-video,
+.fa-react,
+.fa-user-astronaut {
+    color: #61dafb;
+}
+
+.fa-school,
+.fa-git-alt {
+    color: #df4c37;
+}
+
+.fa-github {
+    color: #b1b1b1;
+}

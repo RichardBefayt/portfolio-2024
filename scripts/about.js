@@ -1,63 +1,21 @@
-fetch("/data/about.json")
-    .then(response => {
-        if(!response.ok) {
-            throw new Error("Erreur lors du chargement du fichier JSON");
-        }
-        return response.json();
-    })
-    .then(aboutData => {
-        console.log("aboutData", aboutData);
-        
-        const aboutBoxes = document.querySelector(".about-boxes");
-        
-        const colors = ["box-1", "box-2", "box-3", "box-4", "box-5"];
+// Sélectionne toutes les boîtes et les éléments h3
+const aboutBoxes = document.querySelectorAll(".about-box");
+const aboutItems = document.querySelectorAll(".about-items");
+const h3Titles = document.querySelectorAll(".about-box h3");
 
-        aboutData.forEach((item, index) => {
-            const aboutBox = document.createElement("div");
-            aboutBox.className = "about-box";
+aboutBoxes.forEach((box, index) => {
+    box.addEventListener("click", () => {
+        const currentItems = aboutItems[index];
+        const currentTitle = h3Titles[index];
 
-            const colorClass = colors[index % colors.length];
+        const isClosed = currentItems.classList.contains("closed");
 
-            aboutBox.classList.add(colorClass);
+        // Toggle animation classes pour le titre
+        currentTitle.classList.toggle("title-closed", !isClosed);
+        currentTitle.classList.toggle("title-open", isClosed);
 
-            const h3Title = document.createElement("h3");
-            h3Title.textContent = item.title;
-            aboutBox.appendChild(h3Title);
-
-            const aboutItems = document.createElement("div");
-            aboutItems.classList.add("about-items", "closed");
-            aboutBox.appendChild(aboutItems);
-
-            const detailsList = document.createElement("ul");
-            item.details.forEach(detail => {
-                for (key in detail) {
-                    const listItem = document.createElement("li");
-                    listItem.textContent = detail[key];
-                    detailsList.appendChild(listItem);
-                }
-            });
-            aboutItems.appendChild(detailsList);
-            aboutBoxes.appendChild(aboutBox);
-
-            aboutBox.addEventListener("click", () => {
-                const isClosed = aboutItems.classList.contains("closed");
-
-                if (isClosed) {
-                    aboutItems.classList.remove("closed");
-                    aboutItems.classList.add("open");
-
-                    h3Title.classList.remove("title-closed");
-                    h3Title.classList.add("title-open");
-                } else {
-                    aboutItems.classList.remove("open");
-                    aboutItems.classList.add("closed");
-
-                    h3Title.classList.remove("title-open");
-                    h3Title.classList.add("title-closed");
-                }
-            });
-        });
-    })
-    .catch(error => {
-        console.error("Problème avec fetch :", error)
+        // Toggle animation classes pour les items
+        currentItems.classList.toggle("closed", !isClosed);
+        currentItems.classList.toggle("open", isClosed);
     });
+});

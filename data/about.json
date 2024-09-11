@@ -43,8 +43,9 @@
             {
                 "skillOne": "Organisé",
                 "skillTwo": "Persévérant",
-                "skillThree": "Travail en équipe",
-                "skillFour": "Créatif"
+                "skillThree": "Autonome",
+                "skillFour": "Créatif",
+                "skillFive": "Travail en équipe"
             }
         ]
     },
@@ -56,7 +57,8 @@
                 "activityOne": "Moto",
                 "activityTwo": "Histoire",
                 "activityThree": "Astronomie",
-                "activityFour": "Jeux Vidéo"
+                "activityFour": "Astronomie",
+                "activityFive": "Jeux Vidéo"
             }
         ]
     }

@@ -42,10 +42,6 @@
     background-repeat: no-repeat;
 
 }
-.home-title:hover {    
-    cursor: default;
-    color: var(--secondColor);
-}
 
 .home h2 {
     font-size: 1.3rem;
