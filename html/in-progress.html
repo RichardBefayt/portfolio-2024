@@ -17,6 +17,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script src="../scripts/navbar.js" type="text/javascript" defer></script>
     <script src="../scripts/in-progress.js" type="text/javascript" defer></script>
 
 </head>
@@ -31,7 +32,7 @@
                 <h1 class="header-title">Portfolio</h1>
             </a>
 
-            <nav>
+            <nav class="navbar-menu" id="menu">
                 <ul>
                     <li>
                         <a href="../html/home.html">Accueil</a>
@@ -54,6 +55,11 @@
                     </li>
                 </ul>
             </nav>
+
+            <div class="navbar-hamburger">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" style="display: none;"></i>
+            </div>
             
         </header>
         
