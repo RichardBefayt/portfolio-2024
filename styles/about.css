@@ -135,8 +135,6 @@
     height: 210px;
     border: 0.5px solid var(--firstColor);
     box-shadow: -9px 9px 4px 0 rgba(255, 255, 255, 0.3);
-    filter: brightness(120%);
-    opacity: 0.6;
 }
 
 .box-1 {
