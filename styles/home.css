@@ -33,15 +33,79 @@
     color: inherit;
 }
 
-.home-title {    
-    grid-area: 1 / 1 / 2 / 2; /* div 1 */
+.home-title {
     font-size: 1.8rem;
     background-image: url(../assets/pictures/pages/home/portfolio-bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    text-align: center;
 }
+
+.home-title p {
+    display: flex;
+}
+
+.home-title p span {
+    position: relative;
+    font-size: 1.3rem;
+    letter-spacing: 12px;
+    color: var(--firstColor);
+    animation: shine 4s ease-in-out infinite;
+}
+
+/* Animation de brillance */
+@keyframes shine {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, 0.8),
+            0 0 20px rgba(255, 255, 255, 0.6),         
+            0 0 30px rgba(255, 255, 255, 0.4),
+            0 0 40px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+.home-title p span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .home-title p span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .home-title p span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .home-title p span:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  .home-title p span:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  
+  .home-title p span:nth-child(6) {
+    animation-delay: 1s;
+  }
+  
+  .home-title p span:nth-child(7) {
+    animation-delay: 1.2s;
+  }
+  
+  .home-title p span:nth-child(8) {
+    animation-delay: 1.4s;
+  }
+  
+  .home-title p span:nth-child(9) {
+    animation-delay: 1.6s;
+  }
 
 .home h2 {
     font-size: 1.3rem;
@@ -114,7 +178,10 @@
     transition: var(--transition);
 }
 .home-about-infos .details .mail:hover {
+    padding: 5px 10px;
     color: var(--secondColor);
+    background-color: var(--fourthColor);
+    border-radius: 10px;
 }
 
 /***** CV *****/
