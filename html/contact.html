@@ -18,6 +18,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="../scripts/navbar.js" type="text/javascript" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "KkE4xqTURUUWOnDwG",
+          });
+       })();
+    </script>
     <script src="../scripts/contact.js" type="text/javascript" defer></script>
 
 </head>
@@ -93,11 +103,11 @@
                             <div class="form-firme">
                                 <label
                                     class="form-label"
-                                    htmlFor="firme"
+                                    htmlFor="firme_id"
                                 >
                                 </label>
                                 <input
-                                    id="firme"
+                                    id="firme_id"
                                     type="text"
                                     placeholder="Nom de l'entreprise"
                                 />
@@ -111,7 +121,7 @@
                                 >
                                 </label>
                                 <input
-                                    id="email"
+                                    id="email_id"
                                     type="email"
                                     placeholder="Email"
                                 />
@@ -123,6 +133,7 @@
                                 >
                                 </label>
                                 <input
+                                    id="subject_id"
                                     type="text"
                                     placeholder="Sujet"
                                 />
@@ -131,7 +142,6 @@
 
                     </div>
     
-                    
                     <div class="form-bottom">
                         <div class="form-textarea-container">
                             <label
@@ -139,6 +149,7 @@
                             >
                             </label>
                             <textarea
+                            id="message"
                                 class="form-textarea"
                                 rows="6"
                                 placeholder="Votre Message"></textarea>

@@ -28,7 +28,7 @@ form.addEventListener("submit", (event) => {
     };
 
     const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email_id").value;
 
     let nameOk = true;
     let emailOk = true;
@@ -37,7 +37,7 @@ form.addEventListener("submit", (event) => {
     validateEmail(email, document.getElementById("emailError"));
 
     if (nameOk && emailOk) {
-        contactSubmitted();
+        sendEmail();
     } else {
         document.getElementById("submitError").textContent = "Merci de remplir tous les champs";
         document.getElementById("submitError").style.display = "block";
@@ -49,10 +49,23 @@ function contactSubmitted() {
     document.getElementById('modal').style.display = 'block';
 }
 
-// Fermer la fenêtre modale lorsque l'utilisateur clique sur le bouton de fermeture
 document.querySelector('.close-modal').addEventListener('click', function() {
     document.getElementById('modal').style.display = 'none';
 
-    // Réinitialiser les champs du formulaire
     form.reset();
 });
+
+function sendEmail() {
+    const params = {
+        from_name: document.getElementById("name").value,
+        firme_id: document.getElementById("firme_id").value,
+        email_id: document.getElementById("email_id").value,
+        subject_id: document.getElementById("subject_id").value,
+        message: document.getElementById("message").value
+    }
+    emailjs
+        .send("service_ylitlfk", "template_7i5b3ot", params)
+        .then(function (response) {
+            contactSubmitted();
+        })
+}
