@@ -89,22 +89,21 @@
     line-height: 1.11rem;
 }
 
-.about-btn {
+.about-btn,
+.about-btn-cv {
     display: flex;
     gap: 20px;
+}
+
+.about-btn {
     margin-top: 1.2em;
 }
 
-.about-btn a button {
+.about-btn a {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 0 5px;
-}
-
-.about-btn a button i {
-    display: none;
 }
 
 .about-bottom {
@@ -263,13 +262,6 @@
         justify-content: center;
     }
 
-    .about-btn a button p {
-        /* display: none; */
-    }
-    .about-btn a button i {
-        display: block;
-    }
-
     .about-bottom {
         margin-top: 0;
     }
@@ -285,6 +277,12 @@
 }
 
 @media only screen and (max-width: 576px) {
+    .about-subtitles h3 {
+        width: 70%;
+        margin: 0.5em auto 1.2em;
+        line-height: 1.2em;
+    }
+
     .about-btn {
         flex-direction: column;
         align-items: center;
