@@ -51,23 +51,26 @@
     font-size: 1.3rem;
     letter-spacing: 12px;
     color: var(--firstColor);
-    animation: shine 4s ease-in-out infinite;
+    animation: shine 5s ease-in-out infinite;
 }
 
 /* Animation de brillance */
 @keyframes shine {
     0% {
         text-shadow: none;
+        transform: rotate(-180deg) scale(0);
     }
     50% {
         text-shadow: 
-            0 0 10px rgba(255, 255, 255, 0.8),
-            0 0 20px rgba(255, 255, 255, 0.6),         
-            0 0 30px rgba(255, 255, 255, 0.4),
-            0 0 40px rgba(255, 255, 255, 0.3);
+            0 0 20px rgba(255, 255, 255, 0.9),
+            0 0 30px rgba(255, 255, 255, 0.7),         
+            0 0 40px rgba(255, 255, 255, 0.5),
+            0 0 50px rgba(255, 255, 255, 0.3);
+        transform: rotate(0deg) scale(1.2);
     }
     100% {
         text-shadow: none;
+        transform: rotate(360deg) scale(0);
     }
 }
 
