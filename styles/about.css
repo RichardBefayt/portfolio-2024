@@ -234,6 +234,13 @@
 .about-items ul li {
     font-size: 0.9rem;
 }
+.about-items ul li:nth-child(2) {
+    line-height: 1.2;
+}
+
+.about-items__span {
+    margin-left: 10%;
+}
 
 @media only screen and (max-width: 768px) {
     .about-container {
