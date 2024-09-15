@@ -37,7 +37,7 @@
     color: var(--thirdColor);
     background-color: var(--firstColor);
     border: 1px solid var(--fourthColor);
-    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.322);
+    box-shadow: 0px 4px 6px rgb(0, 0, 0);
 }
 
 .project-card__subtitle {
@@ -97,6 +97,7 @@
     align-items: center;
     gap: 10px;
     padding: 10px;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0);
 }
 
 @media screen and (max-width: 576px) {

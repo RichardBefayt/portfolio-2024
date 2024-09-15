@@ -45,7 +45,6 @@
     width: calc(100% + 30%);
     max-width: 350px;
     padding: 10px;
-    border: 0.5px solid #000000;
 }
 
 .about-img-container img {
@@ -104,6 +103,7 @@
     justify-content: center;
     align-items: center;
     gap: 0 5px;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0);
 }
 
 .about-bottom {
