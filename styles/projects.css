@@ -1,3 +1,11 @@
+.projects__bg-desk {
+	background-image: url(../assets/pictures/pages/projects/bg/desktop/desk-1.png);
+}
+
+.projects__bg-mobile {
+	display: none;
+}
+
 #projects {
     display: flex;
     flex-direction: column;
@@ -98,6 +106,17 @@
     gap: 10px;
     padding: 10px;
     box-shadow: 0px 4px 6px rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 640px) {
+    .projects__bg-desk {
+        display: none;
+    }
+    
+    .projects__bg-mobile {
+        display: block;
+        background-image: url(../assets/pictures/pages/projects/bg/mobile/mobile-1.png);
+    }
 }
 
 @media screen and (max-width: 576px) {

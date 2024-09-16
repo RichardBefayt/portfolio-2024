@@ -1,3 +1,11 @@
+.contact__bg-desk {
+	background-image: url(../assets/pictures/pages/contact/bg/desktop/desk-1.png);
+}
+
+.contact__bg-mobile {
+    display: none;
+}
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -187,6 +195,17 @@ form input {
     .form-right {
         width: 100%;
         gap: 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .contact__bg-desk {
+        display: none;
+    }
+    
+    .contact__bg-mobile {
+        display: block;
+        background-image: url(../assets/pictures/pages/contact/bg/mobile/mobile-1.jpg);
     }
 }
 

@@ -1,3 +1,55 @@
+class Carte {
+    constructor(project, cardTemplate) {
+        // Clone le template de carte
+        this.cardElement = cardTemplate.cloneNode(true);
+        this.cardElement.style.display = "block";
+
+        // Remplit les informations de la carte
+        this.setSubtitle(project.subtitle);
+        this.setImage(project.thumbnail, project.subtitle);
+        this.setDescription(project.description);
+        this.setTechnos(project.technos);
+        this.setLinks(project.slug, project.source);
+    }
+
+    setSubtitle(subtitle) {
+        this.cardElement.querySelector(".project-card__subtitle").textContent = subtitle;
+    }
+
+    setImage(thumbnail, subtitle) {
+        const imgElement = this.cardElement.querySelector(".project-card__img");
+        imgElement.src = thumbnail;
+        imgElement.alt = subtitle;
+    }
+
+    setDescription(description) {
+        this.cardElement.querySelector(".span-description").textContent = description;
+    }
+
+    setTechnos(technos) {
+        this.cardElement.querySelector(".span-technos").textContent = technos;
+    }
+
+    setLinks(slug, source) {
+        const slugLink = this.cardElement.querySelector(".project-card__footer-slug");
+        slugLink.href = slug;
+        slugLink.textContent = "Voir le projet";
+
+        const sourceLink = this.cardElement.querySelector(".project-card__footer-source");
+        if (source) {
+            sourceLink.href = source;
+            sourceLink.textContent = "Code source";
+        } else {
+            sourceLink.style.display = "none";
+        }
+    }
+
+    // Méthode pour récupérer l'élément de la carte
+    getCardElement() {
+        return this.cardElement;
+    }
+}
+
 // Fonction pour charger les données JSON
 async function loadProjectsData() {
     try {
@@ -9,36 +61,18 @@ async function loadProjectsData() {
     }
 }
 
-// Fonction pour cloner et remplir une carte existante
-function fillCard(cardTemplate, project) {
-    const cardClone = cardTemplate.cloneNode(true);
-    cardClone.style.display = "block"; // Rendre la carte visible
+// Fonction pour remplir les cartes dans le DOM
+function fillProjectCards(categoryData) {
+    const projectsContainer = document.querySelector(".projects-container");
+    const cardTemplate = document.getElementById("card-template"); // Sélectionner le modèle de carte
 
-    // Remplir les éléments avec les données du projet
-    cardClone.querySelector(".project-card__subtitle").textContent = project.subtitle;
-    const imgElement = cardClone.querySelector(".project-card__img");
-    imgElement.src = project.thumbnail;
-    imgElement.alt = project.subtitle;
-    
-    const linkElement = cardClone.querySelector(".card-link");
-    linkElement.href = project.slug;
+    projectsContainer.textContent = ""; // Vider les cartes existantes
 
-    cardClone.querySelector(".span-description").textContent = project.description;
-    cardClone.querySelector(".span-technos").textContent = project.technos;
-
-    const slugLink = cardClone.querySelector(".project-card__footer-slug");
-    slugLink.href = project.slug;
-    slugLink.textContent = "Voir le projet";
-
-    const sourceLink = cardClone.querySelector(".project-card__footer-source");
-    if (project.source) {
-        sourceLink.href = project.source;
-        sourceLink.textContent = "Code source";
-    } else {
-        sourceLink.style.display = "none"; // Si pas de source, cacher le lien
-    }
-
-    return cardClone;
+    categoryData.details.forEach(project => {
+        // Crée une nouvelle carte avec la classe Carte
+        const carte = new Carte(project, cardTemplate);
+        projectsContainer.appendChild(carte.getCardElement());
+    });
 }
 
 // Fonction pour vérifier l'existence de la catégorie
@@ -64,17 +98,3 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 });
-
-// Fonction pour remplir les cartes dans le DOM
-function fillProjectCards(categoryData) {
-    const projectsContainer = document.querySelector(".projects-container");
-    const cardTemplate = document.getElementById("card-template"); // Sélectionner le modèle de carte
-
-    projectsContainer.textContent = ""; // Vider les cartes existantes
-
-    // Pour chaque projet, cloner et remplir la carte
-    categoryData.details.forEach(project => {
-        const card = fillCard(cardTemplate, project);
-        projectsContainer.appendChild(card);
-    });
-}

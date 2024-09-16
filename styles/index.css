@@ -49,30 +49,16 @@ body::-webkit-scrollbar-thumb:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    filter: brightness(75%);
+    filter: brightness(45%);
     background-repeat: no-repeat;
+	background-position: center;
     background-size: cover;
     z-index: -5;
 }
 
-.home__bg {
-	background-image: url(../assets/pictures/pages/home/bg1.jpg);
-}
-
-.about__bg {
-	background-image: url(../assets/pictures/pages/home/bg2.png);
-}
-
-.projects__bg {
-	background-image: url(../assets/pictures/pages/home/bg3.png);
-}
 
 .skills__bg {
 	background-image: url(../assets/pictures/pages/home/bg3.jpg);
-}
-
-.contact__bg {
-	background-image: url(../assets/pictures/pages/home/bg2.png);
 }
 
 .in-progress__bg {
