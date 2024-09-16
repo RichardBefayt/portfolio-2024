@@ -2,7 +2,7 @@ class Carte {
     constructor(project, cardTemplate) {
         // Clone le template de carte
         this.cardElement = cardTemplate.cloneNode(true);
-        this.cardElement.style.display = "block";
+        this.cardElement.style.display = "flex";
 
         // Remplit les informations de la carte
         this.setSubtitle(project.subtitle);
@@ -95,6 +95,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const categoryData = getValidCategory(projectsData, category);
         if (categoryData) {
             fillProjectCards(categoryData);
+            const projectsTitle = document.querySelector('.projects-title');
+            projectsTitle.textContent = categoryData.title;
         }
     }
 });

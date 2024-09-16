@@ -206,6 +206,7 @@ form input {
     .contact__bg-mobile {
         display: block;
         background-image: url(../assets/pictures/pages/contact/bg/mobile/mobile-1.jpg);
+        filter: brightness(100%);
     }
 }
 

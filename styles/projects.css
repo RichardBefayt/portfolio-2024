@@ -117,6 +117,14 @@
         display: block;
         background-image: url(../assets/pictures/pages/projects/bg/mobile/mobile-1.png);
     }
+
+    .projects-title {
+        margin-bottom: 0;
+    }
+
+    #projects .back-button {
+        margin-bottom: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 576px) {
