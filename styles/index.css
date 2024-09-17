@@ -7,12 +7,23 @@
 	--fourthColor: #202020;
 	--fifthColor: #043f95;
 	--speed: 500ms;
-    --transition: all 0.3s ease-in-out;
+    --transition: all 0.5s ease-in-out;
 }
 
 body {
 	font-family: 'Poppins', sans-serif;
-	background-color: #202020a1;
+	background-color: var(--fourthColor);
+	animation: transitionIn 0.8s ease-in-out;
+}
+@keyframes transitionIn {
+	from { 
+		opacity: 0;
+		transform: translateY(-10deg);
+	}
+	to { 
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 body::-webkit-scrollbar {
 	width: 13px;
@@ -56,23 +67,9 @@ body::-webkit-scrollbar-thumb:hover {
     z-index: -5;
 }
 
-
-.skills__bg {
-	background-image: url(../assets/pictures/pages/home/bg3.jpg);
-}
-
-.in-progress__bg {
-	background-image: url(../assets/pictures/pages/in-progress/construction.jpg);
-}
-
-.not-found__bg {
-	background-image: url(../assets/pictures/pages/home/bg1.jpg);
-}
-
 /* Pour tous les liens */
 a {
 	text-decoration: none;
-    transition: var(--transition);
 }
 
 /* Pour toutes les listes (non ordonnées) */
