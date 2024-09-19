@@ -13,17 +13,6 @@
 body {
 	font-family: 'Poppins', sans-serif;
 	background-color: var(--fourthColor);
-	animation: transitionIn 0.5s ease-in-out;
-}
-@keyframes transitionIn {
-	from { 
-		opacity: 0;
-		transform: translateY(-10deg);
-	}
-	to { 
-		opacity: 1;
-		transform: translateY(0);
-	}
 }
 body::-webkit-scrollbar {
 	width: 13px;
@@ -70,6 +59,7 @@ body::-webkit-scrollbar-thumb:hover {
 /* Pour tous les liens */
 a {
 	text-decoration: none;
+	transition: var(--transition);
 }
 
 /* Pour toutes les listes (non ordonnées) */
